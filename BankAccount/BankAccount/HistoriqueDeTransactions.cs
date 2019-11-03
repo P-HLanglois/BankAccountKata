@@ -20,6 +20,7 @@ namespace BankAccount.Test
         public string Afficher()
         {
             return _transactions.Select(AffichageLigneTransactionParDefaut)
+                .Reverse()
                 .Aggregate("", (returnedString, transactionString) => returnedString + transactionString.ToString());
         }
 
