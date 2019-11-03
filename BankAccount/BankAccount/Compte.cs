@@ -16,7 +16,7 @@ namespace BankAccount.Test
 
         public string ReleveDeCompte()
         {
-            return "DATE | AMOUNT | BALANCE";
+            return "DATE | MONTANT | BALANCE";
         }
     }
 }
