@@ -20,15 +20,21 @@ namespace BankAccount.Test
             return stringBuilder.ToString();
         }
 
+        public double BalanceActuelle()
+        {
+            return _historiqueDeTransactions.BalanceActuelle();
+        }
+
         public void Deposer(int montant, DateTime date)
         {
             var nouveauDepot = TransactionBancaire.CreerDepot(montant, date, BalanceActuelle());
             _historiqueDeTransactions.AjouterTransaction(nouveauDepot);
         }
 
-        public double BalanceActuelle()
+        public void Retirer(int montant, in DateTime date)
         {
-            return _historiqueDeTransactions.BalanceActuelle();
+            var nouveauRetrait = TransactionBancaire.CreerRetrait(montant, date, BalanceActuelle());
+            _historiqueDeTransactions.AjouterTransaction(nouveauRetrait);
         }
     }
 }

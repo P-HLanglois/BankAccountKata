@@ -14,22 +14,28 @@ namespace BankAccount.Test
             _montant = montant;
             _typeTransaction = typeTransaction;
             _date = date;
-            Balance = balance + montant;
+            Balance = balance;
         }
 
         public static TransactionBancaire CreerDepot(double montant, DateTime date, double balance)
         {
-            return new TransactionBancaire(montant, TypeTransaction.Depot, date, balance);
+            return new TransactionBancaire(montant, TypeTransaction.Depot, date, balance + montant);
         }
 
         public string AffichageParDefaut()
         {
             return _typeTransaction + " | " + _date.ToString("dd/MM/yyyy") + " | " + _montant + " | " + Balance;
         }
+
+        public static TransactionBancaire CreerRetrait(int montant, DateTime date, double balance)
+        {
+            return new TransactionBancaire(montant, TypeTransaction.Retrait, date, balance - montant);
+        }
     }
 
     internal enum TypeTransaction
     {
-        Depot
+        Depot,
+        Retrait
     }
 }
