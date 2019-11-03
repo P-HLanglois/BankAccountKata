@@ -18,7 +18,7 @@ namespace BankAccount.Test
         {
             // Given / When new account created
             // Then
-            Check.That(compte.ReleveDeCompte()).IsEqualTo("DATE | MONTANT | BALANCE");
+            Check.That(compte.ReleveDeCompte()).IsEqualTo("OPERATION | DATE | MONTANT | BALANCE");
         }
     }
 }
