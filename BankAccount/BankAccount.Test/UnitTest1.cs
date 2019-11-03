@@ -10,13 +10,14 @@ namespace BankAccount.Test
         [SetUp]
         public void Setup()
         {
+            
         }
 
         [Test]
         public void CreatedAccountMustBeInitializedWith0OnBalanceAndEmptyTransactionList()
         {
             // Given / When
-            compte = Compte.CreateCompte();
+            compte = new Compte();
 
             // Then
             Check.That(compte.ReleveDeCompte()).IsEqualTo("DATE | AMOUNT | BALANCE");

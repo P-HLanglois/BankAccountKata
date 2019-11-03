@@ -8,16 +8,10 @@ namespace BankAccount.Test
         private int Balance;
         private List<TransactionBancaire> Transactions;
 
-        public static Compte CreateCompte()
+        public Compte()
         {
-            Compte compte = new Compte();
-            compte.Transactions = new List<TransactionBancaire>();
-            compte.Balance = 0;
-            return compte;
-        }
-
-        private Compte()
-        {
+            Transactions = new List<TransactionBancaire>();
+            Balance = 0;
         }
 
         public string ReleveDeCompte()
