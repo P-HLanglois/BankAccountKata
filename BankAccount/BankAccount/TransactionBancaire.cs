@@ -27,7 +27,7 @@ namespace BankAccount.Test
             return _typeTransaction + " | " + _date.ToString("dd/MM/yyyy") + " | " + _montant + " | " + Balance;
         }
 
-        public static TransactionBancaire CreerRetrait(int montant, DateTime date, double balance)
+        public static TransactionBancaire CreerRetrait(double montant, DateTime date, double balance)
         {
             return new TransactionBancaire(montant, TypeTransaction.Retrait, date, balance - montant);
         }
