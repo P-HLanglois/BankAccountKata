@@ -33,5 +33,10 @@ namespace BankAccount.Test
         {
             return _transactions.Count() != 0 ? _transactions.Last().Balance : 0;
         }
+
+        public bool isEmpty()
+        {
+            return _transactions.Count == 0;
+        }
     }
 }

@@ -6,6 +6,7 @@ namespace BankAccount.Test
     public sealed class Compte
     {
         private readonly HistoriqueDeTransactions _historiqueDeTransactions;
+        const string MessageHistoriqueVide = "Vous n'avez effectué aucune transaction à ce jour";
 
         public Compte()
         {
@@ -15,6 +16,13 @@ namespace BankAccount.Test
         public string ReleveDeCompte()
         {
             var stringBuilder = new StringBuilder();
+
+            if (_historiqueDeTransactions.isEmpty())
+            {
+                stringBuilder.Append(MessageHistoriqueVide);
+                return stringBuilder.ToString();
+            }
+
             stringBuilder.Append("OPERATION | DATE | MONTANT | BALANCE");
             stringBuilder.Append(_historiqueDeTransactions.Afficher());
             return stringBuilder.ToString();

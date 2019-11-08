@@ -19,7 +19,7 @@ namespace BankAccount.Test
         {
             // Given / When new account created
             // Then
-            Check.That(compte.ReleveDeCompte()).IsEqualTo("OPERATION | DATE | MONTANT | BALANCE");
+            Check.That(compte.ReleveDeCompte()).IsEqualTo("Vous n'avez effectué aucune transaction à ce jour");
         }
 
         [Test]
@@ -49,7 +49,7 @@ namespace BankAccount.Test
             Check.That(compte.ReleveDeCompte()).IsEqualTo("OPERATION | DATE | MONTANT | BALANCE"
                                                           + "\r\nRetrait | 01/04/2019 | 1000 | -1000");
         }
-        
+
         [Test]
         public void LeReleveDoitAfficherPlusieursDepotsDuPlusRecentAuPlusAncien()
         {
@@ -65,8 +65,6 @@ namespace BankAccount.Test
             Check.That(compte.ReleveDeCompte()).IsEqualTo("OPERATION | DATE | MONTANT | BALANCE"
                                                           + "\r\nDepot | 03/04/2019 | 1500 | 3559,45"
                                                           + "\r\nDepot | 01/04/2019 | 2059,45 | 2059,45");
-            
-            
         }
     }
 }
