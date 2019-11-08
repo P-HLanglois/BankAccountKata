@@ -26,8 +26,7 @@ namespace BankAccount.Test
 
         private string AffichageLigneTransactionParDefaut(TransactionBancaire transaction)
         {
-            var result = "\r\n" + transaction.AffichageParDefaut();
-            return result;
+            return "\r\n" + transaction.AffichageParDefaut();
         }
 
         public double BalanceActuelle()

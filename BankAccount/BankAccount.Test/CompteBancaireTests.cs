@@ -65,6 +65,8 @@ namespace BankAccount.Test
             Check.That(compte.ReleveDeCompte()).IsEqualTo("OPERATION | DATE | MONTANT | BALANCE"
                                                           + "\r\nDepot | 03/04/2019 | 1500 | 3559,45"
                                                           + "\r\nDepot | 01/04/2019 | 2059,45 | 2059,45");
+            
+            
         }
     }
 }
