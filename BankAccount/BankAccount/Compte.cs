@@ -6,7 +6,7 @@ namespace BankAccount
     public sealed class Compte
     {
         private readonly HistoriqueDeTransactions _historiqueDeTransactions;
-        const string MessageHistoriqueVide = "Vous n'avez effectué aucune transaction à ce jour";
+        private const string MessageHistoriqueVide = "Vous n'avez effectué aucune transaction à ce jour";
 
         public Compte()
         {
@@ -28,7 +28,7 @@ namespace BankAccount
             return stringBuilder.ToString();
         }
 
-        public double BalanceActuelle()
+        private double BalanceActuelle()
         {
             return _historiqueDeTransactions.BalanceActuelle();
         }
