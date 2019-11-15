@@ -34,7 +34,7 @@ namespace BankAccount
             return _transactions.Count() != 0 ? _transactions.Last().Balance : 0;
         }
 
-        public bool isEmpty()
+        public bool EstVide()
         {
             return _transactions.Count == 0;
         }

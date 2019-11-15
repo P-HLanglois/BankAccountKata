@@ -17,7 +17,7 @@ namespace BankAccount
         {
             var stringBuilder = new StringBuilder();
 
-            if (_historiqueDeTransactions.isEmpty())
+            if (_historiqueDeTransactions.EstVide())
             {
                 stringBuilder.Append(MessageHistoriqueVide);
                 return stringBuilder.ToString();
