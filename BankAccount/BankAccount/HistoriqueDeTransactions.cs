@@ -31,7 +31,7 @@ namespace BankAccount
 
         public double BalanceActuelle()
         {
-            return _transactions.Count() != 0 ? _transactions.Last().Balance : 0;
+            return _transactions.Count != 0 ? _transactions.Last().Balance : 0;
         }
 
         public bool EstVide()
