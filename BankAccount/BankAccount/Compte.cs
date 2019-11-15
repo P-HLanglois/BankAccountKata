@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Text;
 
-namespace BankAccount.Test
+namespace BankAccount
 {
     public sealed class Compte
     {

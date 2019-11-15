@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace BankAccount.Test
+namespace BankAccount
 {
     internal class HistoriqueDeTransactions
     {

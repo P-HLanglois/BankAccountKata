@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace BankAccount.Test
+namespace BankAccount
 {
     public class TransactionBancaire
     {
